@@ -30,9 +30,9 @@ A M A R S
 S T E R I
 O M A Z C
 A L C R H
-P O L O S
----
-Amar
+P O L O S         <--
+---               <-------no puede existir espacio entre la sopa de letras, el separador y las palabras
+Amar              <--
 Osa
 atar
 solo
