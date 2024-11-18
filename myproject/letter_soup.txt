@@ -1,0 +1,13 @@
+X X X X X X X X
+X H X O X X X X
+X O X X M X X X
+S L X X X O X X
+X A X X X X C X
+X X T X X X X X
+X X X S X X X X
+X X X X E X X X
+X X X X X X X X
+---
+Hola
+Como
+Estas
