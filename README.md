@@ -50,21 +50,26 @@ Palo
   ```
 
 ### Instrucciones de Ejecución
-1. **Asegúrate de tener el archivo `letter_soup.txt`** en el mismo directorio que los scripts `input_layer.py`, `logic_layer.py` y `output_layer.py`.
+1. **Clonar el repositorio**: Clona este repositorio en tu máquina local.
+   ```sh
+   git clone https://github.com/tu_usuario/trabajo_final_programacion.git
+   ```
 
 2. **Navegar al directorio del proyecto**:
-   - Abre una terminal y utiliza el comando `cd` para navegar al directorio `myproject` donde se encuentran los archivos. Por ejemplo:
+   - Abre una terminal y utiliza el comando `cd` para navegar al directorio donde se encuentra el repositorio clonado. Reemplaza `ruta/del/repositorio` con la ubicación correcta en tu máquina. Por ejemplo:
      ```sh
-     cd c:/martin_project/myproject
+     cd ruta/del/repositorio
      ```
 
-3. **Ejecutar el script principal (`output_layer.py`)**:
-   - Una vez en el directorio `myproject`, ejecuta el siguiente comando:
+3. **Asegúrate de tener el archivo `letter_soup.txt`** en el mismo directorio que los scripts `input_layer.py`, `logic_layer.py` y `output_layer.py`.
+
+4. **Ejecutar el script principal (`output_layer.py`)**:
+   - Una vez en el directorio del proyecto, ejecuta el siguiente comando:
      ```sh
      python output_layer.py
      ```
 
-4. **Resultado**: Una vez que el script se haya ejecutado, el reporte se generará en un archivo llamado `soup_report.json`. Verás un mensaje en la consola indicando la ruta donde se guardó el archivo de reporte.
+5. **Resultado**: Una vez que el script se haya ejecutado, el reporte se generará en un archivo llamado `soup_report.json`. Verás un mensaje en la consola indicando la ruta donde se guardó el archivo de reporte.
 
 ### Ejemplo de Salida
 El archivo `soup_report.json` tendrá un formato similar al siguiente:
@@ -88,3 +93,5 @@ El archivo `soup_report.json` tendrá un formato similar al siguiente:
 Si tienes preguntas o sugerencias, siéntete libre de abrir un **issue** o contactar al autor del proyecto.
 
 ¡Gracias por usar el Trabajo final de programación: nosvolveremosaverleyton!
+
+ssssssssssssssssss
