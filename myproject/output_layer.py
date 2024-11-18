@@ -27,11 +27,17 @@ def generate_report(letter_soup, words, output_file="soup_report.json"):
     report = find_words(letter_soup, words)
     
     # Write the report to the output JSON file
-    with open(output_file, 'w') as json_file:
-        json.dump(report, json_file, indent=4)  # Save the report in JSON format with an indentation of 4 spaces
+    is_successful = True  # Flag to track if the writing process is successful
+    try:
+        with open(output_file, 'w') as json_file:
+            json.dump(report, json_file, indent=4)  # Save the report in JSON format with an indentation of 4 spaces
+    except Exception as e:
+        is_successful = False
+        print(f"An error occurred while writing the report: {e}")
     
-    # Print the location of the generated file
-    print(f"The report has been saved to: {output_file}")
+    # Print the location of the generated file if successful
+    if is_successful:
+        print(f"The report has been saved to: {output_file}")
 
 # Usage example
 if __name__ == "__main__":

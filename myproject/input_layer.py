@@ -30,11 +30,14 @@ def get_file_content(file_path):
         # If we find the separator "---", switch to reading the words
         if stripped_line == "---":
             parsing_soup = False
-            continue
-
-        if parsing_soup:
+        elif parsing_soup:
             # If we are in the letter soup part, add the line to the letter matrix
-            if all(c.isalpha() or c.isspace() for c in stripped_line):
+            valid_line = True
+            is_valid = True  # Flag to track if the line is valid
+            for c in stripped_line:
+                if not (c.isalpha() or c.isspace()):
+                    is_valid = False
+            if is_valid:
                 letter_soup.append(list(stripped_line.replace(" ", "").upper()))  # Convert to uppercase and remove spaces
         else:
             # If we are in the word search part, add each word to the list of words
@@ -42,4 +45,3 @@ def get_file_content(file_path):
                 words.append(stripped_line)
 
     return letter_soup, words  # Return the letter soup and the words to search for
-

@@ -37,12 +37,13 @@ def find_word(letter_soup, word):
     # Function to check if a word exists starting from a given position and direction
     def check_word(x, y, word, direction):
         dx, dy = direction
+        is_valid = True  # Flag to track if the word is found in the given direction
         for i in range(len(word)):
             new_x, new_y = x + i * dx, y + i * dy
             # Check if out of bounds or if the letter doesn't match
             if new_x < 0 or new_x >= rows or new_y < 0 or new_y >= cols or letter_soup[new_x][new_y] != word[i]:
-                return False
-        return True
+                is_valid = False
+        return is_valid
 
     # Search the word in the entire letter soup
     for i in range(rows):
@@ -76,4 +77,3 @@ def find_words(letter_soup, words):
     for word in words:
         found_words[word] = find_word(letter_soup, word)  # Call find_word for each word
     return found_words
-
