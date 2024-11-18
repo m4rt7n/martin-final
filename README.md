@@ -93,5 +93,3 @@ El archivo `soup_report.json` tendrá un formato similar al siguiente:
 Si tienes preguntas o sugerencias, siéntete libre de abrir un **issue** o contactar al autor del proyecto.
 
 ¡Gracias por usar el Trabajo final de programación: nosvolveremosaverleyton!
-
-ssssssssssssssssss
