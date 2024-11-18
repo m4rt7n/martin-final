@@ -16,15 +16,15 @@ El proyecto está dividido en tres capas, cada una en un archivo separado:
 - `logic_layer.py`: Funciones para encontrar palabras en la sopa de letras.
 - `output_layer.py`: Coordina la ejecución y genera el reporte.
 - `letter_soup.txt`: Archivo de entrada con la sopa de letras y las palabras a buscar.
-- `reporte_sopa_letras.json`: Archivo de salida que contiene el reporte con las palabras encontradas y no encontradas.
+- `soup_report.json`: Archivo de salida que contiene el reporte con las palabras encontradas y no encontradas.
 
 ## Formato del Archivo de Entrada
-El archivo de entrada (`sopa_letras.txt`) debe tener el siguiente formato:
+El archivo de entrada (`letter_soup.txt`) debe tener el siguiente formato:
 1. **Matriz de letras**: Cada fila de la sopa de letras en mayúsculas, separadas por espacios.
 2. **Separador**: Una línea con tres guiones (`---`) que indica el fin de la sopa de letras y el inicio de las palabras a buscar.
 3. **Palabras a buscar**: Cada palabra en una línea separada. Las palabras pueden estar en mayúsculas o minúsculas.
 
-### Ejemplo de `sopa_letras.txt`
+### Ejemplo de `letter_soup.txt`
 ```
 A M A R S
 S T E R I
@@ -50,27 +50,24 @@ Palo
   ```
 
 ### Instrucciones de Ejecución
-1. **Clonar el repositorio**: Clona este repositorio en tu máquina local.
-   ```sh
-   git clone https://github.com/tu_usuario/trabajo_final_programacion.git
-   ```
+1. **Asegúrate de tener el archivo `letter_soup.txt`** en el mismo directorio que los scripts `input_layer.py`, `logic_layer.py` y `output_layer.py`.
 
-2. **Navegar al directorio**: Cambia al directorio del proyecto.
-   ```sh
-   cd trabajo_final_programacion
-   ```
+2. **Navegar al directorio del proyecto**:
+   - Abre una terminal y utiliza el comando `cd` para navegar al directorio `myproject` donde se encuentran los archivos. Por ejemplo:
+     ```sh
+     cd c:/martin_project/myproject
+     ```
 
-3. **Preparar el archivo de entrada**: Asegúrate de tener el archivo `sopa_letras.txt` en el mismo directorio que los scripts.
+3. **Ejecutar el script principal (`output_layer.py`)**:
+   - Una vez en el directorio `myproject`, ejecuta el siguiente comando:
+     ```sh
+     python output_layer.py
+     ```
 
-4. **Ejecutar el script principal**: Ejecuta `output_layer.py` utilizando Python.
-   ```sh
-   python output_layer.py
-   ```
-
-5. **Resultado**: Una vez que el script se haya ejecutado, el reporte se generará en un archivo llamado `reporte_sopa_letras.json`. Verás un mensaje en la consola indicando la ruta donde se guardó el archivo de reporte.
+4. **Resultado**: Una vez que el script se haya ejecutado, el reporte se generará en un archivo llamado `soup_report.json`. Verás un mensaje en la consola indicando la ruta donde se guardó el archivo de reporte.
 
 ### Ejemplo de Salida
-El archivo `reporte_sopa_letras.json` tendrá un formato similar al siguiente:
+El archivo `soup_report.json` tendrá un formato similar al siguiente:
 ```json
 {
   "Amar": true,
@@ -85,10 +82,9 @@ El archivo `reporte_sopa_letras.json` tendrá un formato similar al siguiente:
 
 ## Notas Adicionales
 - **Formato Consistente**: Asegúrate de que el archivo de entrada esté bien formateado (letras en mayúsculas, sin caracteres especiales, etc.) para evitar errores de ejecución.
-- **Modificación de Archivo de Entrada**: Puedes modificar `sopa_letras.txt` para probar diferentes sopas de letras y listas de palabras.
+- **Modificación de Archivo de Entrada**: Puedes modificar `letter_soup.txt` para probar diferentes sopas de letras y listas de palabras.
 
 ## Contacto
 Si tienes preguntas o sugerencias, siéntete libre de abrir un **issue** o contactar al autor del proyecto.
 
 ¡Gracias por usar el Trabajo final de programación: nosvolveremosaverleyton!
-
