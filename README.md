@@ -52,7 +52,7 @@ Palo
 ### Instrucciones de Ejecución
 1. **Clonar el repositorio**: Clona este repositorio en tu máquina local.
    ```sh
-   git clone https://github.com/tu_usuario/trabajo_final_programacion.git
+   git clone https://github.com/m4rt7n/martin-final.git
    ```
 
 2. **Navegar al directorio del proyecto**:
@@ -87,7 +87,7 @@ El archivo `soup_report.json` tendrá un formato similar al siguiente:
 
 ## Notas Adicionales
 - **Formato Consistente**: Asegúrate de que el archivo de entrada esté bien formateado (letras en mayúsculas, sin caracteres especiales, etc.) para evitar errores de ejecución.
-- **Modificación de Archivo de Entrada**: Puedes modificar `letter_soup.txt` para probar diferentes sopas de letras y listas de palabras.
+- **Modificación de Archivo de Entrada**: Puedes modificar `letter_soup.txt` para probar diferentes sopas de letras y listas de palabras, teniendo en cuenta de que la sopa de letras debe estar formulada como una matriz, tal cual como en el ejemplo.
 
 ## Contacto
 Si tienes preguntas o sugerencias, siéntete libre de abrir un **issue** o contactar al autor del proyecto.
