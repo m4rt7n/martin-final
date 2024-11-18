@@ -1,36 +1,47 @@
-# Archivo: output_layer.py
+# File: output_layer.py
 import json
 
-def generate_report(letter_soup, words):
+def generate_report(letter_soup, words, output_file="soup_report.json"):
     """
-    Genera un reporte en formato JSON con las palabras encontradas y no encontradas en la sopa de letras.
+    Generates a report in JSON format with the words found and not found in the letter soup.
     
-    :param letter_soup: Matriz de letras.
-    :param words: Lista de palabras a buscar.
-    :param output_file: Nombre del archivo JSON de salida.
+    Description:
+    This function generates a JSON file that reports which words were found and which were not found in the letter soup. It uses the functions defined in the logic layer to perform the search.
+    
+    :param letter_soup: The matrix of letters to search within.
+        - Type: list of lists of str
+        - Description: Represents the letter soup, where each sublist is a row in the soup.
+    
+    :param words: The list of words to search for in the letter soup.
+        - Type: list of str
+        - Description: The words that we are trying to find in the letter soup.
+    
+    :param output_file: The name of the output JSON file.
+        - Type: str
+        - Default: "soup_report.json"
+        - Description: The file path where the output report will be stored.
     """
-    output_file="soup_report.json"
-    from logic_layer import find_words  # Importar la función find_words desde la capa lógica
+    from logic_layer import find_words  # Import find_words function from the logic layer
     
-    # Encontrar las palabras en la sopa de letras utilizando la función find_words
+    # Find words in the letter soup using the find_words function
     report = find_words(letter_soup, words)
     
-    # Abrir el archivo de salida y escribir el reporte en formato JSON
+    # Write the report to the output JSON file
     with open(output_file, 'w') as json_file:
-        json.dump(report, json_file, indent=4)  # Guardar el reporte en formato JSON con una indentación de 4 espacios
+        json.dump(report, json_file, indent=4)  # Save the report in JSON format with an indentation of 4 spaces
     
-    # Imprimir la ubicación del archivo generado
-    print(f"El reporte ha sido almacenado en: {output_file}")
+    # Print the location of the generated file
+    print(f"The report has been saved to: {output_file}")
 
-# Ejemplo de uso
+# Usage example
 if __name__ == "__main__":
-    from input_layer import get_file_content  # Importar la función get_file_content desde la capa de entrada
+    from input_layer import get_file_content  # Import get_file_content function from the input layer
     
-    # Definir la ruta del archivo de entrada (modificar según la ubicación del archivo)
-    file_path = "letter_soup.txt"  # Cambiar por la ruta del archivo de entrada
+    # Define the input file path (modify this according to the actual location of the input file)
+    file_path = "letter_soup.txt"  # Change to the path of the input file
     
-    # Obtener la sopa de letras y las palabras a buscar desde el archivo de entrada
+    # Get the letter soup and the words to search for from the input file
     letter_soup, words = get_file_content(file_path)
     
-    # Generar el reporte en formato JSON
+    # Generate the report in JSON format
     generate_report(letter_soup, words)
